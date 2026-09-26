@@ -1,0 +1,15 @@
+class Solution {
+public:
+    int maxDepth(string s) {
+      int ob = 0 ;
+      int result = 0;
+
+      for(char ch : s){
+        if(ch == '(') ob++;
+        else if(ch == ')') ob--;
+
+        result = max(result,ob);
+      }  
+      return result;
+    }
+};
